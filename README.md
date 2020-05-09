@@ -6,7 +6,7 @@ There are 3 main way for the device to discover the ztp server:
 
 1. DHCP Option 43: Seems to be the easiest way
 2. DNS: The device will look for **pnpserver**.*localdomain*
-3. Cloud redirect: couldn't test it because my lab sits behind a proxy
+3. Cloud redirect: requires a cisco license
 
 ### How to Configure the DHCP pool (including DHCP Option 43)
 ```
