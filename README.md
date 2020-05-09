@@ -1,8 +1,6 @@
 # cisco-pnp-server
 Cisco Network PnP server written in Flask to bootstrap Cisco enterprise network devices
 
-# cisco-pnp
-
 ## pnp server discovery
 There are 3 main way for the device to discover the ztp server:
 
