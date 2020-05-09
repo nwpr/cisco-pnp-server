@@ -8,7 +8,7 @@ import xmltodict
 app = Flask(__name__, template_folder="templates")
 current_dir = Path(__file__)
 
-SERIAL_NUM_RE = re.compile(r'PID:(?P<product_id>\w+),VID:(?P<hw_version>\w+),SN:(?P<serial_number>\w+)')
+SERIAL_NUM_RE = re.compile(r'PID:(?P<product_id>[\w\/]+),VID:(?P<hw_version>\w+),SN:(?P<serial_number>\w+)')
 
 
 DEVICES = {
