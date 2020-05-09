@@ -20,17 +20,7 @@ Device(config-dhcp)# dns-server 10.1.1.254
 Device(config-dhcp)# domain-name domain.local
 Device(config-dhcp)# end
 ```
-
-### DNS discovery configuration
-This is the DHCP configuration needed, note the DNS server and the **local domain**.
-```
-ip dhcp pool Vlan1
- network 10.102.1.0 255.255.255.0
- default-router 10.102.1.1
- dns-server 10.102.2.20
- domain-name secmob.local
-```
-(and remember to create an entry on the DNS server!!)
+(and remember to create an entry on the DNS server if using DNS method)
 
 ## Gotchas
 #### 1- The out of band management interface in cat3650 and cat3850 doensn't work properly:
