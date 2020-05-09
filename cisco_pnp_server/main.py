@@ -87,3 +87,7 @@ def pnp_work_response():
     }
     result_data = render_template('bye.xml', **jinja_context)
     return Response(result_data, mimetype='text/xml')
+
+
+if __name__ == '__main__':
+    app.run(port=8080, debug=True)
