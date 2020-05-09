@@ -21,6 +21,7 @@ Device(config-dhcp)# dns-server 10.1.1.254
 Device(config-dhcp)# domain-name domain.local
 Device(config-dhcp)# end
 ```
+\*\*HOST\*\* has to be replaced with the actual server host.
 (and remember to create an entry on the DNS server if using DNS method)
 
 ## Gotchas
