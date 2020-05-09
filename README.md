@@ -1,6 +1,6 @@
 # cisco-pnp-server
 Cisco Network PnP server written in Flask to bootstrap Cisco network devices
-(https://developer.cisco.com/docs/network-plug-n-play/)
+(https://www.cisco.com/c/en/us/td/docs/solutions/Enterprise/Plug-and-Play/solution/guidexml/b_pnp-solution-guide.html)
 
 ## pnp server discovery
 There are 3 main way for the device to discover the pnp server:
