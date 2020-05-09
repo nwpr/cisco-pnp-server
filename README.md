@@ -3,7 +3,7 @@ Cisco Network PnP server written in Flask to bootstrap Cisco network devices
 (https://developer.cisco.com/docs/network-plug-n-play/)
 
 ## pnp server discovery
-There are 3 main way for the device to discover the ztp server:
+There are 3 main way for the device to discover the pnp server:
 
 1. DHCP Option 43: Seems to be the easiest way
 2. DNS: The device will look for **pnpserver**.*localdomain*
