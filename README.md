@@ -16,6 +16,8 @@ Device(config)# ip dhcp pool pnp_device_pool
 Device(config-dhcp)# network 10.1.1.0 255.255.255.0
 Device(config-dhcp)# default-router 10.1.1.1
 Device(config-dhcp)# option 67 ascii http://**HOST**/http.py
+Device(config-dhcp)# dns-server 10.1.1.254
+Device(config-dhcp)# domain-name domain.local
 Device(config-dhcp)# end
 ```
 
