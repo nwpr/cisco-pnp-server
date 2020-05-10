@@ -11,14 +11,6 @@ current_dir = Path(__file__)
 SERIAL_NUM_RE = re.compile(r'PID:(?P<product_id>[\w\/]+),VID:(?P<hw_version>\w+),SN:(?P<serial_number>\w+)')
 
 
-DEVICES = {
-    "9DNVJ6W5CFV": {
-        "config-filename": "test.cfg",
-    }
-}
-
-
-
 def work_request(host, type="device_info"):
     url = f"http://{host}/pnp/WORK-REQUEST"
     with open(current_dir / f"{type}.xml") as f:
@@ -33,7 +25,7 @@ def get_device_info(host):
 
 @app.route('/test-xml')
 def test_xml():
-    result = render_template('load_config.xml', correlator_id="123", config_filename="test.cfg", udi="123")
+    result = render_template('load_config.xml', correlator_id="123", config_filename="base.config", udi="123")
     return Response(result, mimetype='text/xml')
 
 
@@ -65,7 +57,7 @@ def pnp_work_request():
     udi = data['pnp']['@udi']
     udi_match = SERIAL_NUM_RE.match(udi)
     serial_number = udi_match.group('serial_number')
-    config_filename = DEVICES[serial_number]["config-filename"]
+    config_filename = serial_number + ".config"
     jinja_context = {
         "udi": udi,
         "correlator_id": correlator_id,
